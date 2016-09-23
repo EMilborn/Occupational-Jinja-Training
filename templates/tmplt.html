@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title> {{ heading }} </title>
+  </head>
+  
+  
+
+  <body>
+    <table>
+      {% for key in collection %}
+      <tr>
+        <td> {{key}} </td>
+        <td> {{collection[key]}} </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br>
+    <h1>{{bod}}
+  </body>
+  
+</html>
+
+  
