@@ -1,11 +1,11 @@
 from flask import Flask, render_template
-from utils import occu-table
+from utils import occuTable
 
 app = Flask(__name__)
 
 @app.route("/occupations")
-def runit()
-    return render_template( 'tmplt.html', heading="OCCUPATIONS", collection=occu-table.makeDict(), bod=occutable.getOcc())
+def runit():
+    return render_template( 'tmplt.html', heading="OCCUPATIONS", collection=occuTable.makeDict(), bod=occuTable.getOcc())
 
 
 if __name__ == "__main__":
