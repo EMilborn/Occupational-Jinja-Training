@@ -1,9 +1,6 @@
 import random
-from flask import Flask, render_template 
 
-app = Flask(__name__)
-
-f = open("occupations.csv", "r").readlines()
+f = open("data/occupations.csv", "r").readlines()
 f = [x.strip("\r\n") for x in f]
 f = f[1:-1]
 
@@ -46,12 +43,7 @@ def makeDict():
 def getOcc():
     return randOcc(makeDict())
 
-@app.route("/occupations")
-def OccPage():
-    return render_template( 'tmplt.html', heading="OCCUPATIONS", collection=makeDict(), bod=getOcc())
     
    
 
-if __name__ == "__main__":
-    app.debug = True
-    app.run()
+
